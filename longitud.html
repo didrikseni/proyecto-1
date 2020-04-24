@@ -54,14 +54,13 @@
     
     <!-- Page Content -->
     <div class="container text-center page-content">
-        <br><br><br>
         <h2><strong>Ingrese la longitud a convertir</strong></h2>
-        <br>
         <div class="row justify-content-center">
             <div class="col-auto" id="firstColumn">
+                <br><br>
                 <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]">
                 <br>
-                <select id="fromUnit">
+                <select class="custom-select" id="fromUnit">
                     <option value="metro" onmousedown="refresh(this)">Metro</option>
                     <option value="kilometro" onmousedown="refresh(this)">Kilometro</option>
                     <option value="centimetro" onmousedown="refresh(this)">Centimetro</option>
@@ -72,12 +71,13 @@
                 </select>
             </div>
             <div class="col-auto">
-                <label>=</label>
+                <label><h1>=</h1></label>
             </div>
             <div class="col-auto" id="secondColumn">
+                <br><br>
                 <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]">
                 <br>
-                <select id="toUnit">
+                <select class="custom-select" id="toUnit">
                     <option value="metro" onmousedown="refresh(this)">Metro</option>
                     <option value="kilometro" onmousedown="refresh(this)" selected="selected">Kilometro</option>
                     <option value="centimetro" onmousedown="refresh(this)">Centimetro</option>
