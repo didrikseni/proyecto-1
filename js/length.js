@@ -2,13 +2,13 @@ var firstColumn = document.getElementById("firstColumn");
 var secondColumn = document.getElementById("secondColumn");
 
 var array_of_functions = {
-    "metro": meters_to,
-    "kilometro": kilometers_to,
-    "milla": miles_to,
-    "milimetro": milimeters_to,
-    "yarda": yards_to,
-    "pie": foots_to,
-    "centimetro": centimeters_to,
+    "metro": metersTo,
+    "kilometro": kilometersTo,
+    "milla": milesTo,
+    "milimetro": milimetersTo,
+    "yarda": yardsTo,
+    "pie": footsTo,
+    "centimetro": centimetersTo,
 }
 
 function convert(element) {
@@ -23,20 +23,36 @@ function convert(element) {
         fromValue = element.value;
         toValue = document.getElementById("fromValue");
     }
-
-    unitFrom = fromContainer.options[fromContainer.selectedIndex].value;
-    unitTo = toContainer.options[toContainer.selectedIndex].value;
-
-    convertedValue = calculate(unitFrom, unitTo, fromValue);
-
-    toValue.value = convertedValue;
+    calculate(fromContainer, toContainer, fromValue, toValue);
 }
 
-function calculate(unitFrom, unitTo, value) {
-    return array_of_functions[unitFrom](unitTo,value);
+function refresh(element) {
+    if (firstColumn.contains(element)) {
+        fromContainer = document.getElementById("toUnit");
+        toContainer = document.getElementById("fromUnit");
+        toRefresh = document.getElementById("fromValue");
+        value = document.getElementById("toValue").value;
+    } else {
+        fromContainer = document.getElementById("fromUnit");
+        toContainer = document.getElementById("toUnit");
+        toRefresh = document.getElementById("toValue");
+        value = document.getElementById("fromValue").value;
+    }
+    calculate(fromContainer, toContainer, value, toRefresh);
 }
 
-function meters_to(unitTo, value) {
+function calculate(fromContainer, toContainer, value, toValue) {
+    if (isNaN(value)) {
+        alert("Debe ingresar un valor válido!");
+    } else {
+        unitFrom = fromContainer.options[fromContainer.selectedIndex].value;
+        unitTo = toContainer.options[toContainer.selectedIndex].value;
+        convertedValue = array_of_functions[unitFrom](unitTo, value);
+        toValue.value = convertedValue;
+    }    
+}
+
+function metersTo(unitTo, value) {
     switch (unitTo) {
         case "kilometro":
             return value / 1000;
@@ -51,11 +67,11 @@ function meters_to(unitTo, value) {
         case "milla":
             return value / 1609.34;
         default:
-            return 0;
+            return value;
     }
 }
 
-function centimeters_to(unitTo, value) {
+function centimetersTo(unitTo, value) {
     switch (unitTo) {
         case "kilometro":
             return value / 100000;
@@ -70,11 +86,11 @@ function centimeters_to(unitTo, value) {
         case "milla":
             return value / 160934;
         default:
-            return 0;
+            return value;
     }
 }
 
-function kilometers_to(unitTo, value) {
+function kilometersTo(unitTo, value) {
     switch (unitTo) {
         case "metro":
             return value * 1000;
@@ -89,33 +105,33 @@ function kilometers_to(unitTo, value) {
         case "milla":
             return value * 0.621371;
         default:
-            return 0;
+            return value;
     }
 }
 
-function foots_to(unitTo, value) {
+function footsTo(unitTo, value) {
     switch (unitTo) {
         case "kilometro":
             return value * 0.0003048;
+        case "metro":
+            return value * 0.3048;
         case "centimetro":
             return value * 30.48;
         case "milimetro":
             return value * 304.8;
         case "yarda":
             return value * 0.333333;
-        case "metro":
-            return value * 0.3048;
         case "milla":
             return value * 0.000189394;
         default:
-            return 0;
+            return value;
     }
 }
 
-function miles_to(unitTo, value) {
+function milesTo(unitTo, value) {
     switch (unitTo) {
         case "kilometro":
-            return value *1.60934;
+            return value * 1.60934;
         case "metro":
             return value * 1609.34;
         case "centimetro":
@@ -124,14 +140,14 @@ function miles_to(unitTo, value) {
             return value * 1609340;
         case "yarda":
             return value * 1760;
-        case "milla":
+        case "foot":
             return value * 5280;
         default:
-            return 0;
+            return value;
     }
 }
 
-function yards_to(unitTo, value) {
+function yardsTo(unitTo, value) {
     switch (unitTo) {
         case "kilometro":
             return value / 1093.61;
@@ -146,11 +162,11 @@ function yards_to(unitTo, value) {
         case "pie":
             return value * 3;
         default:
-            return 0;
+            return value;
     }
 }
 
-function milimeters_to(unitTo, value) {
+function milimetersTo(unitTo, value) {
     switch (unitTo) {
         case "kilometro":
             return value / 1000000;
@@ -165,6 +181,6 @@ function milimeters_to(unitTo, value) {
         case "pie":
             return value * 0.00328084;
         default:
-            return 0;
+            return value;
     }
 }
