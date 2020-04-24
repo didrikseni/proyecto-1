@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title>Conversor de unidades - Primer Proyecto IAW</title>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm sticky-top stroke">
+        <h1 class="navbar-brand text-white"><strong>Conversor</strong></h1>
+        <ul class="navbar-nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link waves-effect text-white" href="index.html">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect text-white" href="longitud.html">
+                    Longitud
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect text-white" href="peso.html">
+                    Peso
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect text-white" href="temperatura.html">
+                    Temperatura
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect text-white" href="#">
+                    Datos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect text-white" href="tiempo.html">
+                    Tiempo
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Nav Bar -->
+
+    <!-- Page Content -->
+    <div class="container text-center page-content">
+        <h2><strong>Ingrese los datos a convertir</strong></h2>
+        <div class="row justify-content-center">
+            <br><br>
+            <div class="col-auto" id="firstColumn">
+                <br><br>
+                <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]">
+                <br>
+                <select class="custom-select" id="fromUnit">
+                    <option value="bit" onmousedown="refresh(this)">Bit</option>
+                    <option value="byte" onmousedown="refresh(this)" selected="selected">Byte</option>
+                    <option value="kilobyte" onmousedown="refresh(this)">Kilobyte</option>
+                    <option value="megabyte" onmousedown="refresh(this)">Megabyte</option>
+                    <option value="gigabyte" onmousedown="refresh(this)">Gigabyte</option>
+                    <option value="terabyte" onmousedown="refresh(this)">Terabyte</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <label><h1>=</h1></label>
+            </div>
+            <div class="col-auto" id="secondColumn">
+                <br><br>
+                <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]">
+                <br>
+                <select class="custom-select" id="toUnit">
+                    <option value="bit" onmousedown="refresh(this)">Bit</option>
+                    <option value="byte" onmousedown="refresh(this)">Byte</option>
+                    <option value="kilobyte" onmousedown="refresh(this)" selected="selected">Kilobyte</option>
+                    <option value="megabyte" onmousedown="refresh(this)">Megabyte</option>
+                    <option value="gigabyte" onmousedown="refresh(this)">Gigabyte</option>
+                    <option value="terabyte" onmousedown="refresh(this)">Terabyte</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content -->
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4 sticky-footer">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase text-light">Primer Proyecto de Ingeniería de Aplicaciones Web</h5>
+                    <p class="text-light">Universidad Nacional del Sur - Primer cuatrimestre 2020</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase text-light">Links de interes</h5>
+
+                    <ul class="list-unstyled">
+                        <li><a class="text-light" href="#!">Link 1</a></li>
+                        <li><a class="text-light" href="#!">Link 2</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase text-light">Fuentes</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-light" href="#!">Link 1</a></li>
+                        <li><a class="text-light" href="#!">Link 2</a></li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-light"> Autor:
+            <a class="text-light" href="https://github.com/didrikseni/"> Ian Didriksen</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- JavaScript -->
+    <script src="js/dataSize.js"></script>
+</body>
+
+</html>
