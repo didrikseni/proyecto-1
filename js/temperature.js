@@ -1,5 +1,4 @@
 var firstColumn = document.getElementById("firstColumn");
-var secondColumn = document.getElementById("secondColumn");
 
 var array_of_functions = {
     "celcius": celciusTo,
@@ -8,18 +7,18 @@ var array_of_functions = {
 }
 
 function convert(element) {
+    fromValue = element.value;
     if (firstColumn.contains(element)) {
         fromContainer = document.getElementById("fromUnit");
         toContainer = document.getElementById("toUnit");
-        fromValue = element.value;
         toValue = document.getElementById("toValue");
     } else {
         fromContainer = document.getElementById("toUnit");
         toContainer = document.getElementById("fromUnit")
-        fromValue = element.value;
         toValue = document.getElementById("fromValue");
     }
-    calculate(fromContainer, toContainer, fromValue, toValue);
+    var res = calculate(fromContainer, toContainer, fromValue);
+    toValue.value = res;
 }
 
 function refresh(element) {
@@ -34,26 +33,28 @@ function refresh(element) {
         toRefresh = document.getElementById("toValue");
         value = document.getElementById("fromValue").value;
     }
-    calculate(fromContainer, toContainer, value, toRefresh);
+    var res = calculate(fromContainer, toContainer, value);
+    toRefresh.value = res;
 }
 
-function calculate(fromContainer, toContainer, value, toValue) {
+function calculate(fromContainer, toContainer, value) {
     if (isNaN(value)) {
         alert("Debe ingresar un valor válido!");
+        convertedValue = 0;
     } else {
         unitFrom = fromContainer.options[fromContainer.selectedIndex].value;
         unitTo = toContainer.options[toContainer.selectedIndex].value;
         convertedValue = array_of_functions[unitFrom](unitTo, value);
-        toValue.value = convertedValue;
-    }    
+    }
+    return convertedValue;
 }
 
 function celciusTo(unitTo, value) {
     switch (unitTo) {
         case "farenheit":
-            return (value * (9/5)) + 32;  // (°C × 9/5) + 32 = °F
+            return (value * (9 / 5)) + 32; // (°C × 9/5) + 32 = °F
         case "kelvin":
-            return parseInt(value) + 273.15;      // °C + 273.15 = K
+            return parseInt(value) + 273.15; // °C + 273.15 = K
         default:
             return value;
     }
@@ -62,9 +63,9 @@ function celciusTo(unitTo, value) {
 function farenheitTo(unitTo, value) {
     switch (unitTo) {
         case "celcius":
-            return (value - 32) * (5/9);    // (°F − 32) × 5/9 = °C
+            return (value - 32) * (5 / 9); // (°F − 32) × 5/9 = °C
         case "kelvin":
-            return ((value - 32) * (5/9)) + 273.15;     //(°F − 32) × 5/9 + 273.15 = K
+            return ((value - 32) * (5 / 9)) + 273.15; //(°F − 32) × 5/9 + 273.15 = K
         default:
             return value;
     }
@@ -73,9 +74,9 @@ function farenheitTo(unitTo, value) {
 function kelvinTo(unitTo, value) {
     switch (unitTo) {
         case "celcius":
-            return value - 273.15;    // K − 273.15 = °C
+            return value - 273.15; // K − 273.15 = °C
         case "farenheit":
-            return ((value - 275.15) * (9/5)) + 32;  //(K − 273.15) × 9/5 + 32 = °F
+            return ((value - 275.15) * (9 / 5)) + 32; //(K − 273.15) × 9/5 + 32 = °F
         default:
             return value;
     }

@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- CSS -->
-      <link rel="stylesheet" href="css/app.css">
-      <link rel="stylesheet" href="css/nav.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-      <!-- Icon library -->
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Icon library -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <title>Conversor de unidades - Primer Proyecto IAW</title>
 </head>
@@ -55,11 +55,11 @@
             </li>
         </ul>
         <button class="btn ml-auto nav-item custom-text-navbar nav-link" onclick="toggleTheme()"><i id="themeToggler"
-            class="fa fa-toggle-off"></i> Tema</button>
+                class="fa fa-toggle-off"></i> Tema</button>
     </nav>
     <!-- Nav Bar -->
 
-    
+
     <!-- Page Content -->
     <div class="container text-center page-content">
         <h2><strong>Ingrese la longitud a convertir</strong></h2>
@@ -68,31 +68,33 @@
                 <br><br>
                 <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]">
                 <br>
-                <select class="custom-select" id="fromUnit">
-                    <option value="metro" onmousedown="refresh(this)">Metro</option>
-                    <option value="kilometro" onmousedown="refresh(this)">Kilometro</option>
-                    <option value="centimetro" onmousedown="refresh(this)">Centimetro</option>
-                    <option value="milimetro" onmousedown="refresh(this)">Milimetro</option>
-                    <option value="milla" onmousedown="refresh(this)">Milla</option>
-                    <option value="yarda" onmousedown="refresh(this)">Yarda</option>
-                    <option value="pie" onmousedown="refresh(this)">Pie</option>
+                <select class="custom-select" id="fromUnit" onchange="refresh(this)">
+                    <option value="metro">Metro</option>
+                    <option value="kilometro">Kilometro</option>
+                    <option value="centimetro">Centimetro</option>
+                    <option value="milimetro">Milimetro</option>
+                    <option value="milla">Milla</option>
+                    <option value="yarda">Yarda</option>
+                    <option value="pie">Pie</option>
                 </select>
             </div>
             <div class="col-auto">
-                <label><h1>=</h1></label>
+                <label>
+                    <h1>=</h1>
+                </label>
             </div>
             <div class="col-auto" id="secondColumn">
                 <br><br>
                 <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]">
                 <br>
-                <select class="custom-select" id="toUnit">
-                    <option value="metro" onmousedown="refresh(this)">Metro</option>
-                    <option value="kilometro" onmousedown="refresh(this)" selected="selected">Kilometro</option>
-                    <option value="centimetro" onmousedown="refresh(this)">Centimetro</option>
-                    <option value="milimetro" onmousedown="refresh(this)">Milimetro</option>
-                    <option value="milla" onmousedown="refresh(this)">Milla</option>
-                    <option value="yarda" onmousedown="refresh(this)">Yarda</option>
-                    <option value="pie" onmousedown="refresh(this)">Pie</option>
+                <select class="custom-select" id="toUnit" onchange="refresh(this)">
+                    <option value="metro">Metro</option>
+                    <option value="kilometro" selected="selected">Kilometro</option>
+                    <option value="centimetro">Centimetro</option>
+                    <option value="milimetro">Milimetro</option>
+                    <option value="milla">Milla</option>
+                    <option value="yarda">Yarda</option>
+                    <option value="pie">Pie</option>
                 </select>
             </div>
         </div>
@@ -121,7 +123,7 @@
                         <li><a class="custom-text-navbar" href="#!">Link 2</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-md-3 mb-md-0 mb-3">
                     <h5 class="text-uppercase custom-text-navbar">Fuentes</h5>
                     <ul class="list-unstyled">

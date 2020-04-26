@@ -67,10 +67,10 @@
                 <br><br>
                 <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]">
                 <br>
-                <select class="custom-select" id="fromUnit">
-                    <option value="celcius" onmousedown="refresh(this)">Grados Celcius</option>
-                    <option value="farenheit" onmousedown="refresh(this)">Grados Farenheit</option>
-                    <option value="kelvin" onmousedown="refresh(this)">Grados Kelvin</option>
+                <select class="custom-select" id="fromUnit" onchange="refresh(this)">
+                    <option value="celcius">Grados Celcius</option>
+                    <option value="farenheit">Grados Farenheit</option>
+                    <option value="kelvin">Grados Kelvin</option>
                 </select>
             </div>
             <div class="col-auto">
@@ -80,10 +80,10 @@
                 <br><br>
                 <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]">
                 <br>
-                <select class="custom-select" id="toUnit">
-                    <option value="celcius" onmousedown="refresh(this)">Grados Celcius</option>
-                    <option value="farenheit" onmousedown="refresh(this)" selected="selected">Grados Farenheit</option>
-                    <option value="kelvin" onmousedown="refresh(this)">Grados Kelvin</option>
+                <select class="custom-select" id="toUnit" onchange="refresh(this)">
+                    <option value="celcius">Grados Celcius</option>
+                    <option value="farenheit" selected="selected">Grados Farenheit</option>
+                    <option value="kelvin">Grados Kelvin</option>
                 </select>
             </div>
         </div>

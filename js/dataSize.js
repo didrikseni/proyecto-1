@@ -1,5 +1,4 @@
 var firstColumn = document.getElementById("firstColumn");
-var secondColumn = document.getElementById("secondColumn");
 
 var array_of_functions = {
     "bit": bitTo,
@@ -11,18 +10,18 @@ var array_of_functions = {
 }
 
 function convert(element) {
+    fromValue = element.value;
     if (firstColumn.contains(element)) {
         fromContainer = document.getElementById("fromUnit");
         toContainer = document.getElementById("toUnit");
-        fromValue = element.value;
         toValue = document.getElementById("toValue");
     } else {
         fromContainer = document.getElementById("toUnit");
         toContainer = document.getElementById("fromUnit")
-        fromValue = element.value;
         toValue = document.getElementById("fromValue");
     }
-    calculate(fromContainer, toContainer, fromValue, toValue);
+    var res = calculate(fromContainer, toContainer, fromValue);
+    toValue.value = res;
 }
 
 function refresh(element) {
@@ -37,18 +36,20 @@ function refresh(element) {
         toRefresh = document.getElementById("toValue");
         value = document.getElementById("fromValue").value;
     }
-    calculate(fromContainer, toContainer, value, toRefresh);
+    var res = calculate(fromContainer, toContainer, value);
+    toRefresh.value = res;
 }
 
-function calculate(fromContainer, toContainer, value, toValue) {
+function calculate(fromContainer, toContainer, value) {
     if (isNaN(value)) {
         alert("Debe ingresar un valor válido!");
+        convertedValue = 0;
     } else {
         unitFrom = fromContainer.options[fromContainer.selectedIndex].value;
         unitTo = toContainer.options[toContainer.selectedIndex].value;
         convertedValue = array_of_functions[unitFrom](unitTo, value);
-        toValue.value = convertedValue;
-    }    
+    }
+    return convertedValue;
 }
 
 function bitTo(unitTo, value) {
