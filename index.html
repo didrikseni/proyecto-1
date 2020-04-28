@@ -63,7 +63,7 @@
     <!-- Page Content -->
     <div class="container page-content child">
         <div class="row child custom-text">
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 <h1 class="text-center">Este es el portal de la web</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus urna at libero sodales, sit
                     amet volutpat purus ultricies. Suspendisse potenti. Etiam at hendrerit orci, a gravida nunc. Fusce
@@ -99,12 +99,20 @@
                     mi, quis vulputate magna. Sed velit mi, tincidunt et ornare id, rhoncus vitae urna. Maecenas
                     placerat vulputate mauris nec pulvinar. </p>
             </div>
-            <div class="col-sm-4 ">
+            <div class="col-sm-5 text-center" id="prev-conversions" onload="loadHistory">
                 <br><br>
-                <h4 class="text-center">Primer Proyecto IAW</h4>
-                <p>Me propuse a realizar una web de utiliad para los usuarios que elijan usarla. Esta utilidad será la
-                    de convertir entre distintas unidades de medida.</p>
-                <p>Ya que he necesitado este tipo de aplicaciones en varias ocasiones</p>
+                <h4 class="text-center">Conversiones previas</h4>
+                <br><br>
+                <p id="conversion0"></p>
+                <p id="conversion1"></p>
+                <p id="conversion2"></p>
+                <p id="conversion3"></p>
+                <p id="conversion4"></p>
+                <p id="conversion5"></p>
+                <p id="conversion6"></p>
+                <p id="conversion7"></p>
+                <p id="conversion8"></p>
+                <p id="conversion9"></p>
             </div>
         </div>
     </div>
@@ -153,6 +161,7 @@
 
     <!-- JavaScript -->
     <script src="js/themeSetting.js"></script>
+    <script src="js/loadHistory.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

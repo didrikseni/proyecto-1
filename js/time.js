@@ -50,10 +50,29 @@ function calculate(fromContainer, toContainer, value) {
         unitFrom = fromContainer.options[fromContainer.selectedIndex].value;
         unitTo = toContainer.options[toContainer.selectedIndex].value;
         convertedValue = array_of_functions[unitFrom](unitTo, value);
+        updateLastConversions(unitFrom, unitTo, value, convertedValue)
     }
     return convertedValue;
 }
 
+function updateLastConversions(unitFrom, unitTo, value, convertedValue) {
+    var obj = {
+        from: unitFrom,
+        to: unitTo,
+        val: value,
+        convertedVal: convertedValue
+    };
+    var toInsert = JSON.stringify(obj);
+    var aux = localStorage.getItem("conv" + 0)
+    for (var i = 0; i < 10 && toInsert != null; i++) {
+        localStorage.setItem(("conv" + i), toInsert);
+        toInsert = null;
+        if (aux != null) {
+            toInsert = aux;
+            aux = localStorage.getItem("conv" + (i + 1));
+        }
+    }
+}
 
 function milisecondTo(unitTo, value) {
     switch (unitTo) {
