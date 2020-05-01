@@ -154,7 +154,7 @@ function milesTo(unitTo, value) {
             return value * 1609340;
         case "yarda":
             return value * 1760;
-        case "foot":
+        case "pie":
             return value * 5280;
         default:
             return value;
