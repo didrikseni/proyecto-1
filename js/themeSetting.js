@@ -1,24 +1,12 @@
-// function to set a given theme/color-scheme
+// funcion que setea un determinado tema en el almacenamiento local
 function setTheme(themeName) {
     localStorage.setItem("theme", themeName);
     document.documentElement.className = themeName;
-}
-
-// function to toggle between light and dark theme
-function toggleTheme() {
-    if (localStorage.getItem("theme") === "theme-dark") {
-        $("#themeToggler").removeClass("fa-toggle-on");
-        $("#themeToggler").addClass("fa-toggle-off");
-        setTheme("theme-light");
-    } else {
-        $("#themeToggler").removeClass("fa-toggle-off");
-        $("#themeToggler").addClass("fa-toggle-on");
-        setTheme("theme-dark");
-    }
-} // Immediately invoked function to set the theme on initial load
+} // Invocamos a la funcion que setea el tema en la carga inicial
 (function () {
-    if (localStorage.getItem("theme") === "theme-dark") {
-        setTheme("theme-dark");
+    themeName = localStorage.getItem("theme");
+    if (themeName != null) {
+        setTheme(themeName);
     } else {
         setTheme("theme-light");
     }

@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -21,42 +22,56 @@
 
 <body class="d-flex flex-column">
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm sticky-top stroke">
+    <nav class="navbar navbar-expand-sm sticky-top ">
         <h1 class="navbar-brand custom-text-navbar"><strong>Conversor</strong></h1>
         <ul class="navbar-nav nav-pills nav-justified">
             <li class="nav-item">
-                <a class="nav-link waves-effect custom-text-navbar" href="index.html">
+                <a class="home nav-link custom-text-navbar faster" href="index.html" onmouseover="animateCSS(this, 'bounceIn')">
                     Home
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect custom-text-navbar" href="longitud.html">
+                <a class="nav-link custom-text-navbar faster" href="longitud.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
                     Longitud
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect custom-text-navbar" href="peso.html">
+                <a class="nav-link custom-text-navbar faster" href="peso.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
                     Peso
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect custom-text-navbar" href="temperatura.html">
+                <a class="nav-link custom-text-navbar faster" href="temperatura.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
                     Temperatura
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect custom-text-navbar" href="datos.html">
+                <a class="nav-link custom-text-navbar faster" href="datos.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
                     Datos
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect custom-text-navbar" href="#">
+                <a class="nav-link custom-text-navbar faster" href="#"
+                    onmouseover="animateCSS(this, 'bounceIn')">
                     Tiempo
                 </a>
             </li>
         </ul>
-        <button class="btn ml-auto nav-item custom-text-navbar nav-link" onclick="toggleTheme()"><i id="themeToggler"
-                class="fa fa-toggle-off"></i> Tema</button>
+        <div class="dropdown ml-auto">
+            <a class="btn dropdown-toggle custom-text-navbar" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" onmouseover="animateCSS(this, 'bounceIn')">
+                Temas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" value="theme-light" onclick="setTheme('theme-light')">Claro</a>
+                <a class="dropdown-item" value="theme-dark" onclick="setTheme('theme-dark')">Oscuro</a>
+                <a class="dropdown-item" value="theme-joy" onclick="setTheme('theme-pastel')">Pastel</a>
+            </div>
+        </div>
     </nav>
     <!-- Nav Bar -->
 
@@ -148,17 +163,16 @@
     <!-- JavaScript -->
     <script src="js/time.js"></script>
     <script src="js/themeSetting.js"></script>
+    <script src="js/animation.js"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>

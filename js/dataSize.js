@@ -61,15 +61,7 @@ function updateLastConversions(unitFrom, unitTo, value, convertedValue) {
         convertedVal: convertedValue
     };
     var toInsert = JSON.stringify(obj);
-    var aux = localStorage.getItem("conv" + 0)
-    for (var i = 0; i < 10 && toInsert != null; i++) {
-        localStorage.setItem(("conv" + i), toInsert);
-        toInsert = null;
-        if (aux != null) {
-            toInsert = aux;
-            aux = localStorage.getItem("conv" + (i + 1));
-        }
-    }
+    localStorage.setItem("conversion-dataSize",toInsert);
 }
 
 function bitTo(unitTo, value) {

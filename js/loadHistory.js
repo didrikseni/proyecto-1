@@ -9,8 +9,6 @@ window.onload = function () {
         elem.innerHTML = obj.val + " " + obj.from + " es igual a " + obj.convertedVal + " " + obj.to;
 
 
-
-
         //NewP = document.createElement("p"); // Create a p element
         //Text = document.createTextNode(i + ""); // Create text to go inside with string value of i
         //NewP.appendChild(Text); // Add text to p element
@@ -28,8 +26,6 @@ function loadHistory() {
         var obj = JSON.parse(json);
 
         elem.innerHTML = obj.value + " " + obj.from + " a " + obj.to + " " + obj.convertedVal;
-
-
 
 
         //NewP = document.createElement("p"); // Create a p element
