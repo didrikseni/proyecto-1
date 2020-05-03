@@ -21,7 +21,7 @@
 
 <body class="d-flex flex-column">
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm sticky-top ">
+    <nav class="navbar navbar-expand-sm fixed-top">
         <h1 class="navbar-brand custom-text-navbar"><strong>Conversor</strong></h1>
         <ul class="navbar-nav nav-pills nav-justified">
             <li class="nav-item">
@@ -59,16 +59,22 @@
                     Tiempo
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="capacity.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Volumen
+                </a>
+            </li>
         </ul>
         <div class="dropdown ml-auto">
-            <a class="btn dropdown-toggle custom-text-navbar" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" onmouseover="animateCSS(this, 'bounceIn')">
+            <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown"
+                 onmouseover="animateCSS(this, 'bounceIn')">
                 Temas
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" value="theme-light" onclick="setTheme('theme-light')">Claro</a>
-                <a class="dropdown-item" value="theme-dark" onclick="setTheme('theme-dark')">Oscuro</a>
-                <a class="dropdown-item" value="theme-joy" onclick="setTheme('theme-pastel')">Pastel</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
             </div>
         </div>
     </nav>
@@ -76,6 +82,7 @@
 
     <!-- Page Content -->
     <div class="container text-center page-content">
+        <br><br><br>
         <h2><strong>Ingrese la termperatura a convertir</strong></h2>
         <div class="row justify-content-center">
             <div class="col-auto" id="firstColumn">
@@ -123,7 +130,7 @@
     <!-- Footer -->
 
     <!-- JavaScript -->
-    <script src="js/time.js"></script>
+    <script src="js/logic/time.js"></script>
     <script src="js/themeSetting.js"></script>
     <script src="js/animation.js"></script>
 

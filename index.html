@@ -13,14 +13,15 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Icon library -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <title>Conversor de unidades - Primer Proyecto IAW</title>
 </head>
 
 <body class="d-flex flex-column">
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm sticky-top ">
+    <nav class="navbar navbar-expand-sm fixed-top">
         <h1 class="navbar-brand custom-text-navbar"><strong>Conversor</strong></h1>
         <ul class="navbar-nav nav-pills nav-justified">
             <li class="nav-item">
@@ -58,16 +59,22 @@
                     Tiempo
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="capacity.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Volumen
+                </a>
+            </li>
         </ul>
         <div class="dropdown ml-auto">
-            <a class="btn dropdown-toggle custom-text-navbar" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" onmouseover="animateCSS(this, 'bounceIn')">
+            <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown"
+                onmouseover="animateCSS(this, 'bounceIn')">
                 Temas
             </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" value="theme-light" onclick="setTheme('theme-light')">Claro</a>
-                <a class="dropdown-item" value="theme-dark" onclick="setTheme('theme-dark')">Oscuro</a>
-                <a class="dropdown-item" value="theme-joy" onclick="setTheme('theme-pastel')">Pastel</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
             </div>
         </div>
     </nav>
@@ -75,62 +82,113 @@
 
     <!-- Page Content -->
     <div class="container page-content child">
+        <br><br><br>
         <div class="row child custom-text">
             <div class="col-sm-7">
                 <h1 class="text-center">Bienvenido a Conversor Online!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus urna at libero sodales,
-                    sit
-                    amet volutpat purus ultricies. Suspendisse potenti. Etiam at hendrerit orci, a gravida nunc.
-                    Fusce
-                    fermentum massa in justo tincidunt, sit amet lobortis tortor accumsan. Vestibulum malesuada
-                    bibendum
-                    nisl at consequat. Praesent eget condimentum lacus, nec tempus ligula. Cras faucibus convallis
-                    ullamcorper. </p>
-                <p> Mauris iaculis congue nulla ac fringilla. Pellentesque congue aliquet volutpat. Nulla et
-                    ultrices
-                    turpis. Nullam sit amet enim a augue varius pretium. Sed ac cursus diam. Quisque et felis vitae
-                    diam
-                    rutrum mattis vel vitae ligula. Integer mattis elit a massa malesuada molestie. Cras aliquam
-                    dolor
-                    in lorem accumsan tincidunt. In hac habitasse platea dictumst. Proin dapibus, risus sed
-                    venenatis
-                    eleifend, nibh justo iaculis eros, ac pulvinar massa eros nec tortor. Donec euismod ipsum vitae
-                    leo
-                    tincidunt, in iaculis ligula luctus. Etiam non nunc sed turpis auctor consectetur. Proin
-                    tristique,
-                    libero eget fermentum vulputate, enim ante mollis ligula, et rhoncus neque justo at ligula.
-                    Vivamus
-                    efficitur nunc et sodales euismod. </p>
-                <p> Donec luctus tortor ac ullamcorper vestibulum. Donec lacinia odio vitae venenatis eleifend.
-                    Etiam
-                    porta nunc in auctor semper. Ut non interdum risus. Cras id turpis pretium, venenatis ante sed,
-                    faucibus lectus. Nunc nisl nibh, tincidunt at faucibus non, ultrices at nibh. Sed nunc dolor,
-                    laoreet eu porttitor ut, euismod eu dolor. Nullam placerat sit amet dui facilisis pellentesque.
-                    Proin non nulla pellentesque, ultricies arcu ut, cursus urna. Morbi nec porta erat. Suspendisse
-                    hendrerit erat massa. Praesent commodo efficitur ex sed tempus. </p>
-                <p> Phasellus tempor tellus sed enim ultricies, sit amet volutpat mi luctus. Vestibulum eget tempus
-                    odio, in iaculis turpis. Vestibulum dapibus, libero sit amet volutpat iaculis, nulla sapien
-                    pharetra
-                    turpis, feugiat blandit ante nulla eget diam. Cras dapibus ligula sed enim volutpat pharetra.
-                    Morbi
-                    dui ligula, suscipit et rutrum non, iaculis in dolor. Etiam commodo ipsum sed ornare congue.
-                    Aenean
-                    interdum urna non auctor tincidunt.</p>
-                <p> Nunc pellentesque justo erat, in semper nibh suscipit sit amet. Proin viverra bibendum suscipit.
-                    Nulla vel diam sit amet velit ultrices rutrum. Pellentesque eu sapien posuere, suscipit justo
-                    eu,
-                    pretium tortor. Quisque mattis fermentum tempor. Suspendisse eu sem ac massa dictum pretium.
-                    Nulla
-                    semper facilisis lacus quis finibus. Nam nec nunc faucibus, auctor justo eget, hendrerit ex.
-                    Cras
-                    quis neque malesuada nunc imperdiet laoreet semper in ipsum. Nam vulputate, justo sit amet
-                    auctor
-                    auctor, leo purus tempor odio, vel porta libero arcu a sapien. Nam pretium tellus ut eros
-                    vehicula
-                    elementum. Vestibulum vestibulum sagittis leo, nec suscipit ligula finibus ut. Vestibulum a
-                    molestie
-                    mi, quis vulputate magna. Sed velit mi, tincidunt et ornare id, rhoncus vitae urna. Maecenas
-                    placerat vulputate mauris nec pulvinar. </p>
+                <p>Las unidades de medida son modelos establecidos para medir diferentes magnitudes, tales como la
+                    longitud, la capacidad, la masa, el tiempo, entre otros.</p>
+                <p>Muchas de estas medidas estan reguladas por el sistema internacional de unidades (SI) el cual define
+                    la unidad de referencia de cada medida. Basado en el sistema métrico decimal, el SI surgió por la
+                    necesidad de estandarizar las unidades que son utilizadas en la mayor parte de los países.</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/length.png">
+                        </div>
+                        <div class="col-auto">
+                            <br>
+                            <h3>Medidas de Longitud:</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Existen varias medidas de longitud, como, por ejemplo, la yarda, la pulgada y el pie. En el SI,
+                        la unidad de referencia de la longitud es el metro (m). Puedes encontrar mas información <a
+                            href="https://es.wikipedia.org/wiki/Metro">aqui</a>.
+                    </p>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/temperature.png">
+                        </div>
+                        <div class="col-auto">
+                            <br>
+                            <h3>Medidas de Temperatura:</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <p>La temperatura es una magnitud física que expresa el grado o nivel de calor o frío de los cuerpos
+                        o del ambiente. En el SI, la unidad de temperatura es el Kelvin. Puedes encontrar mas
+                        información <a href="https://es.wikipedia.org/wiki/Kelvin">aqui</a>.</p>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/weight.png">
+                        </div>
+                        <div class="col-auto">
+                            <br>
+                            <h3>Medidas de Masa:</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <p>En el SI, la medida de masa es el kilogramo (kg). Un cilindro de platino e iridio es usado como
+                        referencia universal del kilogramo. Puedes encontrar mas información <a
+                            href="https://es.wikipedia.org/wiki/Kilogramo">aqui</a>.</p>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/time.png">
+                        </div>
+                        <div class="col-auto">
+                            <br>
+                            <h3>Medidas de Tiempo:</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <p>La unidad básica de tiempo definida por el SI, es el segundo (s). Puedes encontrar mas
+                        información <a href="https://es.wikipedia.org/wiki/Segundo">aqui</a>.</p>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/dataSize.png">
+                        </div>
+                        <div class="col-auto">
+                            <br>
+                            <h3>Medidas de Datos:</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <p>El tamaño de los datos, no es una medida oficial del SI, pero el creciente avance de la
+                        tecnología supone que tengamos que utilizar estas medidas y necesitemos convertirlas. La
+                        unidad de medida básica es el byte. Puedes encontrar mas información <a
+                            href="https://es.wikipedia.org/wiki/Byte">aqui</a></p>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/capacity.png">
+                        </div>
+                        <div class="col-auto">
+                            <br>
+                            <h3>Medidas de Capacidad:</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <p>La unidad de medida de capacidad más utilizada es el litro (l). Son usadas aún el galón, el
+                        barril, el cuarto, entre otras. Puedes encontrar mas información <a
+                            href="https://es.wikipedia.org/wiki/Litro">aqui</a>.</p>
+                    <br>
+                </div>
+
             </div>
             <div class="col-sm-4 ml-5 mt-5">
                 <br>
@@ -163,6 +221,11 @@
                         <h5 class="animated bounceIn slower">Tiempo</h5>
                         <p id="conversion-time"></p>
                     </div>
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">Volumen</h5>
+                        <p id="conversion-capacity"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,6 +248,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
+    <!-- Loading Footer -->
     <script>
         $(function () {
             $('#reusable-footer').load('assets/footer.html');

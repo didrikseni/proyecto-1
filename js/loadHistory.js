@@ -4,7 +4,8 @@ window.onload = function () {
     updateElement(str + "mass");
     updateElement(str + "temperature");
     updateElement(str + "dataSize");
-    updateElement(str + "time");   
+    updateElement(str + "time"); 
+    updateElement(str + "capacity") 
 };
 
 function updateElement(str) {
