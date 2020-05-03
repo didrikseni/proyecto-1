@@ -73,12 +73,14 @@ function cubicMetersTo(unitTo, value) {
             return value * 1000000;
         case "galon-imperial":
             return value * 219.969;
-        case "galon-estadounidense": 
-        return value * 264.172;
+        case "galon-estadounidense":
+            return value * 264.172;
         case "pie-cubico":
-            return value * 35,315; 
+            return value * 35.3147;
         case "pulgada-cubica":
-            return value * 61024.7;
+            return value * 61023.7;
+        default:
+            return value;
     }
 }
 
@@ -89,13 +91,15 @@ function litersTo(unitTo, value) {
         case "mililitro":
             return value * 1000;
         case "galon-imperial":
-            return value / 4,546;
-        case "galon-estadounidense": 
-        return value / 3,785;
+            return value * 0.219969;
+        case "galon-estadounidense":
+            return value * 0.264172;
         case "pie-cubico":
-            return value / 28,317; 
+            return value / 28.317;
         case "pulgada-cubica":
-            return value * 61,024;
+            return value * 61.024;
+        default:
+            return value;
     }
 }
 
@@ -107,12 +111,14 @@ function mililitersTo(unitTo, value) {
             return value / 1000;
         case "galon-imperial":
             return value / 4546;
-        case "galon-estadounidense": 
-        return value / 3785;
+        case "galon-estadounidense":
+            return value / 3785;
         case "pie-cubico":
-            return value / 28317; 
+            return value / 28317;
         case "pulgada-cubica":
-            return value / 16,387;
+            return value / 16.387;
+        default:
+            return value;
     }
 }
 
@@ -121,15 +127,17 @@ function imperialGalonTo(unitTo, value) {
         case "metro-cubico":
             return value / 220;
         case "litro":
-            return value * 4,546;
+            return value * 4.546;
         case "mililitro":
             return value * 4546;
-        case "galon-estadounidense": 
-        return value * 1,201;
+        case "galon-estadounidense":
+            return value * 1.201;
         case "pie-cubico":
-            return value / 6,229; 
+            return value / 6.229;
         case "pulgada-cubica":
             return value * 277;
+        default:
+            return value;
     }
 }
 
@@ -138,32 +146,36 @@ function americanGalonTo(unitTo, value) {
         case "metro-cubico":
             return value / 264;
         case "litro":
-            return value * 3,785;
+            return value * 3.785;
         case "mililitro":
             return value * 3785;
         case "galon-imperial":
-            return value / 1,201;
+            return value / 1.201;
         case "pie-cubico":
-            return value / 7,481; 
+            return value / 7.481;
         case "pulgada-cubica":
             return value * 231;
+        default:
+            return value;
     }
 }
 
 function cubicFeetTo(unitTo, value) {
     switch (unitTo) {
         case "metro-cubico":
-            return value / 35,315;
+            return value / 35.315;
         case "litro":
-            return value * 28,317;
+            return value * 28.317;
         case "mililitro":
             return value * 28317;
         case "galon-imperial":
-            return value * 6,229;
-        case "galon-estadounidense": 
-        return value * 7,481;
+            return value * 6.229;
+        case "galon-estadounidense":
+            return value * 7.481;
         case "pulgada-cubica":
             return value * 1728;
+        default:
+            return value;
     }
 }
 
@@ -172,14 +184,16 @@ function cubicInchTo(unitTo, value) {
         case "metro-cubico":
             return value / 61024;
         case "litro":
-            return value / 61,024;
+            return value / 61.024;
         case "mililitro":
-            return value * 16,387;
+            return value * 16.387;
         case "galon-imperial":
             return value / 277;
-        case "galon-estadounidense": 
-        return value / 231;
+        case "galon-estadounidense":
+            return value / 231;
         case "pie-cubico":
             return value / 1728;
+        default:
+            return value;
     }
 }
