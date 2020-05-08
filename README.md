@@ -1,46 +1,32 @@
-# Proyecto 1:  HTML - CSS - Javascript - DOM
-
-**Fecha de entrega:** 14 de Mayo de 2020 (inclusive).
+# Proyecto 1: HTML - CSS - Javascript - DOM
 
 ## **Introducción**
 
+La siguiente aplicación web fue implementada para un proyecto de la materia Ingeniería de Aplicaciónes Web de la Universidad Nacional del Sur, del primer cuatrimestre del 2020.
+
 El proyecto consiste en la implementación de una aplicación web utilizando las tencnologías HTML, CSS y Javascript. Se permite la utilización de librerías Javascript Open Source, siempre y cuando se otorguen los créditos correspondientes a el o los autores, incluyendo links a las fuentes originales. También es posible la utilización de frameworks de CSS (como por ejemplo Bootstrap). **No** se permite el uso de frameworks JS (AngularJS, React, VueJS).
-
-El proyecto es individual y se debe elegir uno de los 3 temas mencionados a continuación. Es recomendable, una vez elegido el tema y la aplicación concreta a implementar, consultar con la cátedra para asegurarse que permita cumplir los requisitos mínimos requeridos y a su vez no exceda la complejidad del mismo. 
-
 
 ## **Descripción del tema a realizar**
 
-El proyecto que implementaré sera una página web de utilidad, que permita convertir unidades. Se intentará implementar las unidades mas utilizadas, asi brindar la mayor usabilidad posible. 
+La aplicación web es una página de utilidad, que permite la conversión entre distintas unidades. Se intentará implementar las unidades mas utilizadas, asi brindar la mayor usabilidad posible. Además se brindará la posibilidad al usuario de recordar la ultima conversion realizada por cada unindad de medida, asi como también la posibilidad de elegir el tema que prefiere para la página.
 
-Se brindará la posibilidad al usuario de recordar las ultimas conversiones realizadas, asi como también la posibilidad de elegir el tema que prefiere para la página.
+En el momento soporta la conversion de:
 
-Permitirá la conversion de distintas unidades de datos, de longitud, de peso, de temperatura y de tiempo.
+-   Longitud: Metro, Kilometro, Centimetro, Milimetro, Milla, Yarda y Pie.
+-   Peso: Tonelada, Kilogramo, Gramo, Miligramo, Libra y Onza.
+-   Temperatura: Grados Celcius, Grados Farenheit y Kelvin.
+-   Datos: Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte.
+-   Tiempo: Milisegundo, Segundo, Minuto, Hora, Dia, Semana, Mes y Año
+-   Volumen: Métro Cúbico, Litro, Mililitro, Galón Imperial, Galón Estadounidense, Pie Cúbico y Pulgada Cúbica.
 
+Posee los siguientes temas:
 
-## Observaciones	
+-   Claro.
+-   Oscuro.
+-   Pastel.
+-   Cálido.
 
+Probado en los navegadores:
 
-Es importante lograr un aspecto atractivo de la aplicación y permitir una interacción intuitiva para el usuario. También se evaluará el código generado para lograr el funcionamiento de la aplicación, en especial, es importante la separación del modelo de datos, la visualización y la lógica de la aplicación. Además, la página debe simular una aplicación profesional, de alguna empresa o institución (nombre y logo incluido). 
-
-Además, debe tener al menos dos temas o estilos generales diferentes y el usuario debe poder elegir uno de ellos. El navegador deberá recordar cualquier cambio que el usuario haga en la aplicación para la próxima vez que el mismo usuario acceda a la página.
-
-
-*   El archivo principal debe denominarse “index.html”
-*   Debe ser un documento **válido HTML5**.
-*   Deben utilizar archivos **CSS externos válidos **para los estilos de la página.
-*   El código Javascript debe estar en uno o más archivos externos al documento HTML. Pueden, y se recomienda, utilizar librerías Javascript para mejorar el aspecto y la usabilidad de la página, siempre y cuando den crédito a los autores apropiadamente.
-*   Cualquier aclaración o comentario adicional sobre la página, debe hacerse en el archivo readme.md del repositorio.
-*   Deben probar la página en **diferentes navegadores**.
-
-
-## Modalidad de Entrega
-
-El proyecto deberá ser un fork de este repositorio. Al momento de hacer el fork, la cátedra asignará un docente a cargo de la corrección del mismo, el cual deberá ser agregado como colaborador al proyecto. 
-
-La entrega corresponde a un Pull Request desde el branch "master" al branch "entrega" del fork del usuario del Alumno, asignando al docente a cargo de la corrección. Se debe incluir en el mensaje del PR un link a la aplicación funcionando utilizando GitHub pages.
-
-La corrección del mismo será a través de los comentarios que permite realizar GitHub en su página. Y el resultado del proyecto estará asociado al estado final del PR, que puede ser:
-
-*   Approved: Aprobado :D
-*   Request Changes: Re-entrega, se explicará en el mensaje, qué es lo que hay que corregir.
+-   Firefox v76.0
+-   Chrome v81.0.4
