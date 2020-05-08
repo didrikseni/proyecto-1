@@ -1,17 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/themes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
     <!-- Icon library -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -22,7 +22,9 @@
 <body class="d-flex flex-column">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-sm fixed-top">
-        <h1 class="navbar-brand custom-text-navbar"><strong>Conversor</strong></h1>
+        <h1 class="navbar-brand custom-text-navbar">
+            <strong>Conversor</strong>
+        </h1>
         <ul class="navbar-nav nav-pills nav-justified">
             <li class="nav-item">
                 <a class="home nav-link custom-text-navbar faster" href="index.html"
@@ -82,45 +84,55 @@
 
     <!-- Page Content -->
     <div class="container text-center page-content">
-        <br><br><br>
-        <h2><strong>Ingrese los datos a convertir</strong></h2>
-        <div class="row justify-content-center">
-            <br><br>
-            <div class="col-auto" id="firstColumn">
-                <br><br>
-                <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]">
-                <br>
-                <select class="custom-select" id="fromUnit" onchange="refresh(this)">
-                    <option value="bit">Bit</option>
-                    <option value="byte" selected="selected">Byte</option>
-                    <option value="kilobyte">Kilobyte</option>
-                    <option value="megabyte">Megabyte</option>
-                    <option value="gigabyte">Gigabyte</option>
-                    <option value="terabyte">Terabyte</option>
-                </select>
+        <br /><br />
+        <div class="container p-5 m-5">
+            <div class="row shadow mb-4 justify-content-center">
+                <h2><strong>Ingrese los datos a convertir</strong></h2>
             </div>
-            <div class="col-auto">
-                <label>
-                    <h1>=</h1>
-                </label>
+            <div class="row justify-content-center shadow">
+                <br /><br />
+                <div class="col-auto" id="firstColumn">
+                    <br /><br />
+                    <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]" />
+                    <br />
+                    <select class="custom-select" id="fromUnit" onchange="refresh(this)">
+                        <option value="bit">Bit</option>
+                        <option value="byte" selected="selected">Byte</option>
+                        <option value="kilobyte">Kilobyte</option>
+                        <option value="megabyte">Megabyte</option>
+                        <option value="gigabyte">Gigabyte</option>
+                        <option value="terabyte">Terabyte</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label>
+                        <h1>=</h1>
+                    </label>
+                </div>
+                <div class="col-auto" id="secondColumn">
+                    <br /><br />
+                    <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]" />
+                    <br />
+                    <select class="custom-select" id="toUnit" onchange="refresh(this)">
+                        <option value="bit">Bit</option>
+                        <option value="byte">Byte</option>
+                        <option value="kilobyte" selected="selected">Kilobyte</option>
+                        <option value="megabyte">Megabyte</option>
+                        <option value="gigabyte">Gigabyte</option>
+                        <option value="terabyte">Terabyte</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-auto" id="secondColumn">
-                <br><br>
-                <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]">
-                <br>
-                <select class="custom-select" id="toUnit" onchange="refresh(this)">
-                    <option value="bit">Bit</option>
-                    <option value="byte">Byte</option>
-                    <option value="kilobyte" selected="selected">Kilobyte</option>
-                    <option value="megabyte">Megabyte</option>
-                    <option value="gigabyte">Gigabyte</option>
-                    <option value="terabyte">Terabyte</option>
-                </select>
+            <div class="row shadow mt-4 justify-content-center">
+                <h4>En tu ultima visita</h4> 
+                <h4 id="last-conversion" onload="loadLastConversion('dataSize')"></h4>
             </div>
         </div>
     </div>
-    <!-- Page Content -->
 
+
+    </d>
+    <!-- Page Content -->
 
     <!-- Footer -->
     <div id="reusable-footer"></div>
@@ -141,10 +153,9 @@
     <!-- Loading footer -->
     <script>
         $(function () {
-            $('#reusable-footer').load('assets/footer.html');
+            $("#reusable-footer").load("assets/footer.html");
         });
     </script>
-
 </body>
 
 </html>

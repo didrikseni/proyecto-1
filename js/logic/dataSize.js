@@ -1,24 +1,24 @@
-var firstColumn = document.getElementById("firstColumn");
+var firstColumn = document.getElementById('firstColumn');
 
 var array_of_functions = {
-    "bit": bitTo,
-    "byte": byteTo,
-    "kilobyte": kilobyteTo,
-    "megabyte": megabyteTo,
-    "gigabyte": gigabyteTo,
-    "terabyte": terabyteTo
-}
+    bit: bitTo,
+    byte: byteTo,
+    kilobyte: kilobyteTo,
+    megabyte: megabyteTo,
+    gigabyte: gigabyteTo,
+    terabyte: terabyteTo,
+};
 
 function convert(element) {
     fromValue = element.value;
     if (firstColumn.contains(element)) {
-        fromContainer = document.getElementById("fromUnit");
-        toContainer = document.getElementById("toUnit");
-        toValue = document.getElementById("toValue");
+        fromContainer = document.getElementById('fromUnit');
+        toContainer = document.getElementById('toUnit');
+        toValue = document.getElementById('toValue');
     } else {
-        fromContainer = document.getElementById("toUnit");
-        toContainer = document.getElementById("fromUnit")
-        toValue = document.getElementById("fromValue");
+        fromContainer = document.getElementById('toUnit');
+        toContainer = document.getElementById('fromUnit');
+        toValue = document.getElementById('fromValue');
     }
     var res = calculate(fromContainer, toContainer, fromValue);
     toValue.value = res;
@@ -26,15 +26,15 @@ function convert(element) {
 
 function refresh(element) {
     if (firstColumn.contains(element)) {
-        fromContainer = document.getElementById("toUnit");
-        toContainer = document.getElementById("fromUnit");
-        toRefresh = document.getElementById("fromValue");
-        value = document.getElementById("toValue").value;
+        fromContainer = document.getElementById('toUnit');
+        toContainer = document.getElementById('fromUnit');
+        toRefresh = document.getElementById('fromValue');
+        value = document.getElementById('toValue').value;
     } else {
-        fromContainer = document.getElementById("fromUnit");
-        toContainer = document.getElementById("toUnit");
-        toRefresh = document.getElementById("toValue");
-        value = document.getElementById("fromValue").value;
+        fromContainer = document.getElementById('fromUnit');
+        toContainer = document.getElementById('toUnit');
+        toRefresh = document.getElementById('toValue');
+        value = document.getElementById('fromValue').value;
     }
     var res = calculate(fromContainer, toContainer, value);
     toRefresh.value = res;
@@ -42,13 +42,13 @@ function refresh(element) {
 
 function calculate(fromContainer, toContainer, value) {
     if (isNaN(value)) {
-        alert("Debe ingresar un valor válido!");
+        alert('Debe ingresar un valor válido!');
         convertedValue = 0;
     } else {
         unitFrom = fromContainer.options[fromContainer.selectedIndex].value;
         unitTo = toContainer.options[toContainer.selectedIndex].value;
         convertedValue = array_of_functions[unitFrom](unitTo, value);
-        updateLastConversions(unitFrom, unitTo, value, convertedValue)
+        updateLastConversions(unitFrom, unitTo, value, convertedValue);
     }
     return convertedValue;
 }
@@ -58,23 +58,34 @@ function updateLastConversions(unitFrom, unitTo, value, convertedValue) {
         from: unitFrom,
         to: unitTo,
         val: value,
-        convertedVal: convertedValue
+        convertedVal: convertedValue,
     };
     var toInsert = JSON.stringify(obj);
-    localStorage.setItem("conversion-dataSize",toInsert);
+    localStorage.setItem('conversion-dataSize', toInsert);
+}
+
+function loadLastConversion(conv) {
+    var str = 'conversion-' + conv;
+    this.alert('Ñeri aca nunca llega');
+    var elem = this.document.getElementById('last-conversion');
+    var json = this.localStorage.getItem(str);
+    if (json != null) {
+        var obj = this.JSON.parse(json);
+        elem.innerHTML = obj.val + ' ' + obj.from + ' es igual a ' + obj.convertedVal + ' ' + obj.to;
+    }
 }
 
 function bitTo(unitTo, value) {
     switch (unitTo) {
-        case "byte":
+        case 'byte':
             return value / 8;
-        case "kilobyte":
+        case 'kilobyte':
             return value / 8000;
-        case "megabyte":
+        case 'megabyte':
             return value / 8000000;
-        case "gigabyte":
+        case 'gigabyte':
             return value / 8000000000;
-        case "terabyte":
+        case 'terabyte':
             return value / 8000000000000;
         default:
             return value;
@@ -83,15 +94,15 @@ function bitTo(unitTo, value) {
 
 function byteTo(unitTo, value) {
     switch (unitTo) {
-        case "bit":
+        case 'bit':
             return value * 8;
-        case "kilobyte":
+        case 'kilobyte':
             return value / 1000;
-        case "megabyte":
+        case 'megabyte':
             return value / 1000000;
-        case "gigabyte":
+        case 'gigabyte':
             return value / 1000000000;
-        case "terabyte":
+        case 'terabyte':
             return value / 1000000000000;
         default:
             return value;
@@ -100,15 +111,15 @@ function byteTo(unitTo, value) {
 
 function kilobyteTo(unitTo, value) {
     switch (unitTo) {
-        case "bit":
+        case 'bit':
             return value * 8000;
-        case "byte":
+        case 'byte':
             return value * 1000;
-        case "megabyte":
+        case 'megabyte':
             return value / 1000;
-        case "gigabyte":
+        case 'gigabyte':
             return value / 1000000;
-        case "terabyte":
+        case 'terabyte':
             return value / 1000000000;
         default:
             return value;
@@ -117,15 +128,15 @@ function kilobyteTo(unitTo, value) {
 
 function megabyteTo(unitTo, value) {
     switch (unitTo) {
-        case "bit":
+        case 'bit':
             return value * 8000000;
-        case "byte":
+        case 'byte':
             return value * 1000000;
-        case "kilobyte":
+        case 'kilobyte':
             return value * 1000;
-        case "gigabyte":
+        case 'gigabyte':
             return value / 1000;
-        case "terabyte":
+        case 'terabyte':
             return value / 1000000;
         default:
             return value;
@@ -134,15 +145,15 @@ function megabyteTo(unitTo, value) {
 
 function gigabyteTo(unitTo, value) {
     switch (unitTo) {
-        case "bit":
+        case 'bit':
             return value * 8000000000;
-        case "byte":
+        case 'byte':
             return value * 1000000000;
-        case "kilobyte":
+        case 'kilobyte':
             return value * 1000000;
-        case "megabyte":
+        case 'megabyte':
             return value * 1000;
-        case "terabyte":
+        case 'terabyte':
             return value / 1000;
         default:
             return value;
@@ -151,15 +162,15 @@ function gigabyteTo(unitTo, value) {
 
 function terabyteTo(unitTo, value) {
     switch (unitTo) {
-        case "bit":
+        case 'bit':
             return value * 8000000000000;
-        case "byte":
+        case 'byte':
             return value * 1000000000000;
-        case "kilobyte":
+        case 'kilobyte':
             return value * 1000000000;
-        case "megabyte":
+        case 'megabyte':
             return value * 1000000;
-        case "gigabyte":
+        case 'gigabyte':
             return value * 1000;
         default:
             return value;
