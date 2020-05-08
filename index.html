@@ -1,281 +1,287 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/app.css" />
-        <link rel="stylesheet" href="css/nav.css" />
-        <link rel="stylesheet" href="css/themes.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- Icon library -->
-        <link
-            rel="stylesheet"
-            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-            crossorigin="anonymous"
-        />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-        <title>Conversor de unidades - Primer Proyecto IAW</title>
-    </head>
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <body class="d-flex flex-column">
-        <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-sm fixed-top">
-            <h1 class="navbar-brand custom-text-navbar">
-                <strong>Conversor</strong>
-            </h1>
-            <ul class="navbar-nav nav-pills nav-justified">
-                <li class="nav-item">
-                    <a class="home nav-link custom-text-navbar faster" href="#" onmouseover="animateCSS(this, 'bounceIn')">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="longitud.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Longitud
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="peso.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Peso
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="temperatura.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Temperatura
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="datos.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Datos
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="tiempo.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Tiempo
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="volumen.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Volumen
-                    </a>
-                </li>
-            </ul>
-            <div class="dropdown ml-auto">
-                <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown" onmouseover="animateCSS(this, 'bounceIn')">
-                    Temas
+    <title>Conversor de unidades - Primer Proyecto IAW</title>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <h1 class="navbar-brand custom-text-navbar">
+            <strong>Conversor</strong>
+        </h1>
+        <ul class="navbar-nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="home nav-link custom-text-navbar faster" href="#" onmouseover="animateCSS(this, 'bounceIn')">
+                    Home
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
-                    <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
-                    <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="longitud.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Longitud
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="peso.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Peso
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="temperatura.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Temperatura
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="datos.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Datos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="tiempo.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Tiempo
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="volumen.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Volumen
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown ml-auto">
+            <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown"
+                onmouseover="animateCSS(this, 'bounceIn')">
+                Temas
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav Bar -->
+
+    <!-- Page Content -->
+    <div class="container page-content child">
+        <br /><br />
+        <div class="row child custom-text">
+            <div class="col-sm-7">
+                <h1 class="text-center">Bienvenido a Conversor Online!</h1>
+                <p>
+                    Las unidades de medida son modelos establecidos para medir diferentes magnitudes, tales como la
+                    longitud, la capacidad, la
+                    masa, el tiempo, entre otros.
+                </p>
+                <p>
+                    Muchas de estas medidas estan reguladas por el sistema internacional de unidades (SI) el cual define
+                    la unidad de referencia
+                    de cada medida. Basado en el sistema métrico decimal, el SI surgió por la necesidad de estandarizar
+                    las unidades que son
+                    utilizadas en la mayor parte de los países.
+                </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/length.png" />
+                        </div>
+                        <div class="col-auto">
+                            <br />
+                            <h3>Medidas de Longitud:</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        Existen varias medidas de longitud, como, por ejemplo, la yarda, la pulgada y el pie. En el SI,
+                        la unidad de referencia de
+                        la longitud es el metro (m). Puedes encontrar mas información
+                        <a href="https://es.wikipedia.org/wiki/Metro">aqui</a>.
+                    </p>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/temperature.png" />
+                        </div>
+                        <div class="col-auto">
+                            <br />
+                            <h3>Medidas de Temperatura:</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        La temperatura es una magnitud física que expresa el grado o nivel de calor o frío de los
+                        cuerpos o del ambiente. En el
+                        SI, la unidad de temperatura es el Kelvin. Puedes encontrar mas información
+                        <a href="https://es.wikipedia.org/wiki/Kelvin">aqui</a>.
+                    </p>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/weight.png" />
+                        </div>
+                        <div class="col-auto">
+                            <br />
+                            <h3>Medidas de Masa:</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        En el SI, la medida de masa es el kilogramo (kg). Un cilindro de platino e iridio es usado como
+                        referencia universal del
+                        kilogramo. Puedes encontrar mas información
+                        <a href="https://es.wikipedia.org/wiki/Kilogramo">aqui</a>.
+                    </p>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/time.png" />
+                        </div>
+                        <div class="col-auto">
+                            <br />
+                            <h3>Medidas de Tiempo:</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        La unidad básica de tiempo definida por el SI, es el segundo (s). Puedes encontrar mas
+                        información
+                        <a href="https://es.wikipedia.org/wiki/Segundo">aqui</a>.
+                    </p>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/dataSize.png" />
+                        </div>
+                        <div class="col-auto">
+                            <br />
+                            <h3>Medidas de Datos:</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        El tamaño de los datos, no es una medida oficial del SI, pero el creciente avance de la
+                        tecnología supone que tengamos que
+                        utilizar estas medidas y necesitemos convertirlas. La unidad de medida básica es el byte. Puedes
+                        encontrar mas información
+                        <a href="https://es.wikipedia.org/wiki/Byte">aqui</a>
+                    </p>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-auto">
+                            <img src="assets/images/capacity.png" />
+                        </div>
+                        <div class="col-auto">
+                            <br />
+                            <h3>Medidas de Volumen:</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        La unidad de medida de volumen más utilizada es el litro (l). Son usadas aún el galón, el
+                        barril, el cuarto, entre otras.
+                        Puedes encontrar mas información
+                        <a href="https://es.wikipedia.org/wiki/Litro">aqui</a>.
+                    </p>
+                    <br />
                 </div>
             </div>
-        </nav>
-        <!-- Nav Bar -->
-
-        <!-- Page Content -->
-        <div class="container page-content child">
-            <br /><br />
-            <div class="row child custom-text">
-                <div class="col-sm-7">
-                    <h1 class="text-center">Bienvenido a Conversor Online!</h1>
-                    <p>
-                        Las unidades de medida son modelos establecidos para medir diferentes magnitudes, tales como la longitud, la capacidad, la
-                        masa, el tiempo, entre otros.
-                    </p>
-                    <p>
-                        Muchas de estas medidas estan reguladas por el sistema internacional de unidades (SI) el cual define la unidad de referencia
-                        de cada medida. Basado en el sistema métrico decimal, el SI surgió por la necesidad de estandarizar las unidades que son
-                        utilizadas en la mayor parte de los países.
-                    </p>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto">
-                                <img src="assets/images/length.png" />
-                            </div>
-                            <div class="col-auto">
-                                <br />
-                                <h3>Medidas de Longitud:</h3>
-                            </div>
-                        </div>
-                        <br />
-                        <p>
-                            Existen varias medidas de longitud, como, por ejemplo, la yarda, la pulgada y el pie. En el SI, la unidad de referencia de
-                            la longitud es el metro (m). Puedes encontrar mas información
-                            <a href="https://es.wikipedia.org/wiki/Metro">aqui</a>.
-                        </p>
-                    </div>
+            <div class="col-sm-4 ml-5 mt-5">
+                <br />
+                <div class="text-center shadow p-3 mb-5 rounded" id="prev-conversions" onload="loadHistory">
+                    <br /><br />
+                    <h4 class="text-center">CONVERSIONES PREVIAS</h4>
                     <br />
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto">
-                                <img src="assets/images/temperature.png" />
-                            </div>
-                            <div class="col-auto">
-                                <br />
-                                <h3>Medidas de Temperatura:</h3>
-                            </div>
-                        </div>
-                        <br />
-                        <p>
-                            La temperatura es una magnitud física que expresa el grado o nivel de calor o frío de los cuerpos o del ambiente. En el
-                            SI, la unidad de temperatura es el Kelvin. Puedes encontrar mas información
-                            <a href="https://es.wikipedia.org/wiki/Kelvin">aqui</a>.
-                        </p>
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">Longitud</h5>
+                        <p id="conversion-length"></p>
                     </div>
-                    <br />
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto">
-                                <img src="assets/images/weight.png" />
-                            </div>
-                            <div class="col-auto">
-                                <br />
-                                <h3>Medidas de Masa:</h3>
-                            </div>
-                        </div>
-                        <br />
-                        <p>
-                            En el SI, la medida de masa es el kilogramo (kg). Un cilindro de platino e iridio es usado como referencia universal del
-                            kilogramo. Puedes encontrar mas información
-                            <a href="https://es.wikipedia.org/wiki/Kilogramo">aqui</a>.
-                        </p>
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">Peso</h5>
+                        <p id="conversion-mass"></p>
                     </div>
-                    <br />
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto">
-                                <img src="assets/images/time.png" />
-                            </div>
-                            <div class="col-auto">
-                                <br />
-                                <h3>Medidas de Tiempo:</h3>
-                            </div>
-                        </div>
-                        <br />
-                        <p>
-                            La unidad básica de tiempo definida por el SI, es el segundo (s). Puedes encontrar mas información
-                            <a href="https://es.wikipedia.org/wiki/Segundo">aqui</a>.
-                        </p>
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">
+                            Temperatura
+                        </h5>
+                        <p id="conversion-temperature"></p>
                     </div>
-                    <br />
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto">
-                                <img src="assets/images/dataSize.png" />
-                            </div>
-                            <div class="col-auto">
-                                <br />
-                                <h3>Medidas de Datos:</h3>
-                            </div>
-                        </div>
-                        <br />
-                        <p>
-                            El tamaño de los datos, no es una medida oficial del SI, pero el creciente avance de la tecnología supone que tengamos que
-                            utilizar estas medidas y necesitemos convertirlas. La unidad de medida básica es el byte. Puedes encontrar mas información
-                            <a href="https://es.wikipedia.org/wiki/Byte">aqui</a>
-                        </p>
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">Datos</h5>
+                        <p id="conversion-dataSize"></p>
                     </div>
-                    <br />
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-auto">
-                                <img src="assets/images/capacity.png" />
-                            </div>
-                            <div class="col-auto">
-                                <br />
-                                <h3>Medidas de Volumen:</h3>
-                            </div>
-                        </div>
-                        <br />
-                        <p>
-                            La unidad de medida de volumen más utilizada es el litro (l). Son usadas aún el galón, el barril, el cuarto, entre otras.
-                            Puedes encontrar mas información
-                            <a href="https://es.wikipedia.org/wiki/Litro">aqui</a>.
-                        </p>
-                        <br />
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">Tiempo</h5>
+                        <p id="conversion-time"></p>
                     </div>
-                </div>
-                <div class="col-sm-4 ml-5 mt-5">
-                    <br />
-                    <div class="text-center shadow p-3 mb-5 rounded" id="prev-conversions" onload="loadHistory">
-                        <br /><br />
-                        <h4 class="text-center">CONVERSIONES PREVIAS</h4>
-                        <br />
-                        <hr />
-                        <div>
-                            <h5 class="animated bounceIn slower">Longitud</h5>
-                            <p id="conversion-length"></p>
-                        </div>
-                        <hr />
-                        <div>
-                            <h5 class="animated bounceIn slower">Peso</h5>
-                            <p id="conversion-mass"></p>
-                        </div>
-                        <hr />
-                        <div>
-                            <h5 class="animated bounceIn slower">
-                                Temperatura
-                            </h5>
-                            <p id="conversion-temperature"></p>
-                        </div>
-                        <hr />
-                        <div>
-                            <h5 class="animated bounceIn slower">Datos</h5>
-                            <p id="conversion-dataSize"></p>
-                        </div>
-                        <hr />
-                        <div>
-                            <h5 class="animated bounceIn slower">Tiempo</h5>
-                            <p id="conversion-time"></p>
-                        </div>
-                        <hr />
-                        <div>
-                            <h5 class="animated bounceIn slower">Volumen</h5>
-                            <p id="conversion-capacity"></p>
-                        </div>
+                    <hr />
+                    <div>
+                        <h5 class="animated bounceIn slower">Volumen</h5>
+                        <p id="conversion-volume"></p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Page Content -->
+    </div>
+    <!-- Page Content -->
 
-        <!-- Footer -->
-        <div id="reusable-footer"></div>
-        <!-- Footer -->
+    <!-- Footer -->
+    <div id="reusable-footer"></div>
+    <!-- Footer -->
 
-        <!-- JavaScript -->
-        <script src="js/themeSetting.js"></script>
-        <script src="js/loadHistory.js"></script>
-        <script src="js/animation.js"></script>
+    <!-- JavaScript -->
+    <script src="js/themeSetting.js"></script>
+    <script src="js/loadHistory.js"></script>
+    <script src="js/animation.js"></script>
 
-        <!-- jQuery, Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.0.min.js"
-            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"
-        ></script>
+    <!-- jQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 
-        <!-- Loading Footer -->
-        <script>
-            $(function () {
-                $('#reusable-footer').load('assets/footer.html');
-            });
-        </script>
-    </body>
+    <!-- Loading Footer -->
+    <script>
+        $(function () {
+            $('#reusable-footer').load('assets/footer.html');
+        });
+    </script>
+</body>
+
 </html>

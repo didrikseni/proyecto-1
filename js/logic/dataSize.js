@@ -64,17 +64,6 @@ function updateLastConversions(unitFrom, unitTo, value, convertedValue) {
     localStorage.setItem('conversion-dataSize', toInsert);
 }
 
-function loadLastConversion(conv) {
-    var str = 'conversion-' + conv;
-    this.alert('Ñeri aca nunca llega');
-    var elem = this.document.getElementById('last-conversion');
-    var json = this.localStorage.getItem(str);
-    if (json != null) {
-        var obj = this.JSON.parse(json);
-        elem.innerHTML = obj.val + ' ' + obj.from + ' es igual a ' + obj.convertedVal + ' ' + obj.to;
-    }
-}
-
 function bitTo(unitTo, value) {
     switch (unitTo) {
         case 'byte':

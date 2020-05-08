@@ -62,7 +62,7 @@ function updateLastConversions(unitFrom, unitTo, value, convertedValue) {
         convertedVal: convertedValue,
     };
     var toInsert = JSON.stringify(obj);
-    localStorage.setItem('conversion-capacity', toInsert);
+    localStorage.setItem('conversion-volume', toInsert);
 }
 
 function cubicMetersTo(unitTo, value) {

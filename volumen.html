@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/app.css" />
-        <link rel="stylesheet" href="css/nav.css" />
-        <link rel="stylesheet" href="css/themes.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- Icon library -->
-        <link
-            rel="stylesheet"
-            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-            crossorigin="anonymous"
-        />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-        <title>Conversor de unidades - Primer Proyecto IAW</title>
-    </head>
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <body class="d-flex flex-column">
-        <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-sm fixed-top">
-            <h1 class="navbar-brand custom-text-navbar"><strong>Conversor</strong></h1>
-            <ul class="navbar-nav nav-pills nav-justified">
-                <li class="nav-item">
-                    <a class="home nav-link custom-text-navbar faster" href="index.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="longitud.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Longitud
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="peso.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Peso
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="temperatura.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Temperatura
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="datos.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Datos
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="tiempo.html" onmouseover="animateCSS(this, 'bounceIn')">
-                        Tiempo
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-text-navbar faster" href="#" onmouseover="animateCSS(this, 'bounceIn')">
-                        Volumen
-                    </a>
-                </li>
-            </ul>
-            <div class="dropdown ml-auto">
-                <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown" onmouseover="animateCSS(this, 'bounceIn')">
-                    Temas
+    <title>Conversor de unidades - Primer Proyecto IAW</title>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <h1 class="navbar-brand custom-text-navbar"><strong>Conversor</strong></h1>
+        <ul class="navbar-nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="home nav-link custom-text-navbar faster" href="index.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Home
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
-                    <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
-                    <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
-                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="longitud.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Longitud
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="peso.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Peso
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="temperatura.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Temperatura
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="datos.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Datos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="tiempo.html"
+                    onmouseover="animateCSS(this, 'bounceIn')">
+                    Tiempo
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-text-navbar faster" href="#" onmouseover="animateCSS(this, 'bounceIn')">
+                    Volumen
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown ml-auto">
+            <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown"
+                onmouseover="animateCSS(this, 'bounceIn')">
+                Temas
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
+                <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
             </div>
-        </nav>
-        <!-- Nav Bar -->
+        </div>
+    </nav>
+    <!-- Nav Bar -->
 
-        <!-- Page Content -->
-        <div class="container text-center page-content">
-            <br /><br /><br />
-            <h2><strong>Ingrese el volumen a convertir</strong></h2>
-            <div class="row justify-content-center">
+    <!-- Page Content -->
+    <div class="container text-center page-content">
+        <br /><br />
+        <div class="container p-3 m-5">
+            <div class="row shadow mb-4 justify-content-center">
+                <h2><strong>Ingrese el volumen a convertir</strong></h2>
+            </div>
+            <div class="row justify-content-center shadow">
                 <br /><br />
                 <div class="col-auto" id="firstColumn">
                     <br /><br />
-                    <input type="text" id="fromValue" onkeyup="convert(this)" pattern="[0..9]" />
+                    <input type="text" id="fromValue" onkeyup="convert(this);loadLastConversion('volume')"
+                        pattern="[0..9]" />
                     <br />
                     <select class="custom-select" id="fromUnit" onchange="refresh(this)">
                         <option value="metro-cubico">Metro Cúbico</option>
@@ -108,7 +112,8 @@
                 </div>
                 <div class="col-auto" id="secondColumn">
                     <br /><br />
-                    <input type="text" id="toValue" onkeyup="convert(this)" pattern="[0..9]" />
+                    <input type="text" id="toValue" onkeyup="convert(this);loadLastConversion('volume')"
+                        pattern="[0..9]" />
                     <br />
                     <select class="custom-select" id="toUnit" onchange="refresh(this)">
                         <option value="metro-cubico">Metro Cúbico</option>
@@ -121,35 +126,46 @@
                     </select>
                 </div>
             </div>
+            <div class="row mt-5 justify-content-center">
+                <h4 class="col-auto"></h4>
+                <h4 class="col-auto" id="last-conversion"></h4>
+            </div>
         </div>
-        <!-- Page Content -->
 
-        <!-- Footer -->
-        <div id="reusable-footer"></div>
-        <!-- Footer -->
 
-        <!-- JavaScript -->
-        <script src="js/logic/volume.js"></script>
-        <script src="js/themeSetting.js"></script>
-        <script src="js/animation.js"></script>
+    </div>
+    <!-- Page Content -->
 
-        <!-- jQuery first, Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.0.min.js"
-            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"
-        ></script>
+    <!-- Footer -->
+    <div id="reusable-footer"></div>
+    <!-- Footer -->
 
-        <!-- Loading footer -->
-        <script>
-            $(function () {
-                $('#reusable-footer').load('assets/footer.html');
-            });
-        </script>
-    </body>
+    <!-- JavaScript -->
+    <script src="js/logic/volume.js"></script>
+    <script src="js/themeSetting.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/LastConversion.js"></script>
+
+    <!-- jQuery first, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- Loading footer -->
+    <script>
+        $(function () {
+            $('#reusable-footer').load('assets/footer.html');
+        });
+    </script>
+
+    <!-- Loading last conversion -->
+    <script>
+        window.addEventListener("load", function (event) {
+            loadLastConversion('volume')
+        });
+    </script>
+</body>
+
 </html>
