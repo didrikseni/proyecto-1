@@ -93,7 +93,7 @@
             <div class="row justify-content-center shadow">
                 <div class="col-auto" id="firstColumn">
                     <br /><br />
-                    <input type="text" id="fromValue" onkeyup="convert(this);loadLastConversion('mass')"
+                    <input type="text" id="fromValue" onkeyup="convert(this);loadLastConversion('weight')"
                         pattern="[0..9]" />
                     <br />
                     <select class="custom-select" id="fromUnit" onchange="refresh(this)">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-auto" id="secondColumn">
                     <br /><br />
-                    <input type="text" id="toValue" onkeyup="convert(this);loadLastConversion('mass')"
+                    <input type="text" id="toValue" onkeyup="convert(this);loadLastConversion('weight')"
                         pattern="[0..9]" />
                     <br />
                     <select class="custom-select" id="toUnit" onchange="refresh(this)">
@@ -139,7 +139,7 @@
     <!-- Footer -->
 
     <!-- JavaScript -->
-    <script src="js/logic/mass.js"></script>
+    <script src="js/logic/weight.js"></script>
     <script src="js/themeSetting.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/LastConversion.js"></script>
@@ -161,7 +161,7 @@
     <!-- Loading last conversion -->
     <script>
         window.addEventListener("load", function (event) {
-            loadLastConversion('mass')
+            loadLastConversion('weight')
         });
     </script>
 </body>

@@ -1,7 +1,7 @@
 window.onload = function () {
     var str = 'conversion-';
     updateElement(str + 'length');
-    updateElement(str + 'mass');
+    updateElement(str + 'weight');
     updateElement(str + 'temperature');
     updateElement(str + 'dataSize');
     updateElement(str + 'time');

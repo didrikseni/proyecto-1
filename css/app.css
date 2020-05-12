@@ -69,3 +69,7 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
+.fa {
+  color: var(--color-accent) !important;
+}

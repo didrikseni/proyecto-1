@@ -61,7 +61,7 @@ function updateLastConversions(unitFrom, unitTo, value, convertedValue) {
         convertedVal: convertedValue,
     };
     var toInsert = JSON.stringify(obj);
-    localStorage.setItem('conversion-mass', toInsert);
+    localStorage.setItem('conversion-weight', toInsert);
 }
 
 function tonsTo(unitTo, value) {
