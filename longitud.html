@@ -16,72 +16,14 @@
     <!-- Icon library -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <title>Conversor de Longitud</title>
 </head>
 
 <body class="d-flex flex-column">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <h1 class="navbar-brand custom-text-navbar">
-            <strong>Conversor</strong>
-        </h1>
-        <ul class="navbar-nav nav-pills nav-justified">
-            <li class="nav-item">
-                <a class="home nav-link custom-text-navbar faster" href="index.html"
-                    onmouseover="animateCSS(this, 'bounceIn')">
-                    Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-text-navbar faster" href="#" onmouseover="animateCSS(this, 'bounceIn')">
-                    Longitud
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-text-navbar faster" href="peso.html"
-                    onmouseover="animateCSS(this, 'bounceIn')">
-                    Peso
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-text-navbar faster" href="temperatura.html"
-                    onmouseover="animateCSS(this, 'bounceIn')">
-                    Temperatura
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-text-navbar faster" href="datos.html"
-                    onmouseover="animateCSS(this, 'bounceIn')">
-                    Datos
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-text-navbar faster" href="tiempo.html"
-                    onmouseover="animateCSS(this, 'bounceIn')">
-                    Tiempo
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link custom-text-navbar faster" href="volumen.html"
-                    onmouseover="animateCSS(this, 'bounceIn')">
-                    Volumen
-                </a>
-            </li>
-        </ul>
-        <div class="dropdown ml-auto">
-            <a class="btn dropdown-toggle custom-text-navbar" data-toggle="dropdown"
-                onmouseover="animateCSS(this, 'bounceIn')">
-                Temas
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" onclick="setTheme('theme-light')">Claro</a>
-                <a class="dropdown-item" onclick="setTheme('theme-dark')">Oscuro</a>
-                <a class="dropdown-item" onclick="setTheme('theme-pastel')">Pastel</a>
-                <a class="dropdown-item" onclick="setTheme('theme-warm')">Cálido</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav Bar -->
+    <!-- Navbar -->
+    <div id="reusable-navbar"></div>
+    <!-- Navbar -->
 
     <!-- Page Content -->
     <div class="container text-center page-content">
@@ -150,6 +92,13 @@
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- Loading navbar -->
+    <script>
+        $(function () {
+            $("#reusable-navbar").load("assets/navbar.html");
+        });
     </script>
 
     <!-- Loading footer -->
