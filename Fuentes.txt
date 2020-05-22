@@ -1,0 +1,11 @@
+Fuentes: 
+	- Compartir en facebook: https://scotch.io/tutorials/how-to-share-webpages-with-facebook
+	- Compartir en twitter: https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
+	- Iconos (CDN): fontawesome	(https://fontawesome.com/)
+	- JQuery v3.5.0	(CDN) (https://jquery.com/)
+	
+	
+Frameworks utilizados:
+	- Animate.css v3.7.2 (CDN) (https://animate.style/)
+	- Bootstrap v4.4.1 (CDN) (https://getbootstrap.com/)
+	

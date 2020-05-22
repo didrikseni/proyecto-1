@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Conversor de Temperatura</title>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Navbar -->
+    <div id="reusable-navbar"></div>
+    <!-- Navbar -->
+
+    <!-- Page Content -->
+    <div class="container text-center page-content">
+        <br /><br />
+        <div class="container p-3 m-5">
+            <div class="row shadow mb-4 justify-content-center">
+                <h2><strong>Ingrese la termperatura a convertir</strong></h2>
+            </div>
+            <div class="row justify-content-center shadow">
+                <div class="col-auto" id="firstColumn">
+                    <br /><br />
+                    <input type="text" id="fromValue" onkeyup="convert(this);loadLastConversion('temperature')"
+                        pattern="[0..9]" />
+                    <br />
+                    <select class="custom-select" id="fromUnit" onchange="refresh(this)">
+                        <option value="celcius">Grados Celcius</option>
+                        <option value="farenheit">Grados Farenheit</option>
+                        <option value="kelvin">Grados Kelvin</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label>
+                        <h1>=</h1>
+                    </label>
+                </div>
+                <div class="col-auto" id="secondColumn">
+                    <br /><br />
+                    <input type="text" id="toValue" onkeyup="convert(this);loadLastConversion('temperature')"
+                        pattern="[0..9]" />
+                    <br />
+                    <select class="custom-select" id="toUnit" onchange="refresh(this)">
+                        <option value="celcius">Grados Celcius</option>
+                        <option value="farenheit" selected="selected">Grados Farenheit</option>
+                        <option value="kelvin">Grados Kelvin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row p-3 mt-4 justify-content-center">
+                <h4 class="col-auto"></h4>
+                <h4 class="col-auto" id="last-conversion"></h4>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content -->
+
+    <!-- Footer -->
+    <div id="reusable-footer"></div>
+    <!-- Footer -->
+
+    <!-- JavaScript -->
+    <script src="js/logic/temperature.js"></script>
+    <script src="js/themeSetting.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/LastConversion.js"></script>
+
+    <!-- jQuery first, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- Loading navbar -->
+    <script>
+        $(function () {
+            $("#reusable-navbar").load("assets/navbar.html");
+        });
+    </script>
+
+    <!-- Loading footer -->
+    <script>
+        $(function () {
+            $('#reusable-footer').load('assets/footer.html');
+        });
+    </script>
+
+    <!-- Loading last conversion -->
+    <script>
+        window.addEventListener("load", function (event) {
+            loadLastConversion('temperature')
+        });
+    </script>
+</body>
+
+</html>
